@@ -1,1 +1,1 @@
-pyinstaller -w -F -i="C:\workspace\upbit020250329\logo.ico" --add-data="logo.ico;./" --add-data="upbit_home.txt;./" main.py
+pyinstaller -w -F -i="C:\PycharmProjects\upbit_202050330\logo.ico" --add-data="logo.ico;./" --add-data="upbit_home.txt;./" main.py

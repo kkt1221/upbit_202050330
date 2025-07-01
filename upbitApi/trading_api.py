@@ -628,12 +628,12 @@ def speedTradingStart6():
 
                         time.sleep(1)
                         factor = 10 ** 8
-                        # 3만원 이하면 전액 매도
-                        if sellShare <= krw_price <= 30000:
+                        # 4만원 이하면 전액 매도
+                        if sellShare <= krw_price <= 40000:
                             #krw_price = math.floor((krw_price + 50) * factor) / factor
                             #bSellVolume = math.floor((krw_price / sellPrice) * factor) / factor
                             bSellVolume = btc_balance
-                            logger.info("3만원 미만 매도 수량 : " + str(bSellVolume))
+                            logger.info("4만원 미만 매도 수량 : " + str(bSellVolume))
                         else:
                             #bSellVolume = math.floor((sellShare / sellPrice) * factor) / factor
                             logger.info("sellCount : " + str(sellCount))
@@ -676,11 +676,11 @@ def speedTradingStart6():
 
                         time.sleep(1)
                         factor = 10 ** 8
-                        # 3만원 이하면 전액 매수
-                        if sellShare <= krw_balance <= 30000:
+                        # 4만원 이하면 전액 매수
+                        if sellShare <= krw_balance <= 40000:
                             krw_balance = krw_balance * 0.9995  # 수수료 0.05% 고려
                             bBuyVolume = math.floor((krw_balance / buyPrice) * factor) / factor
-                            logger.info("3만원 미만 매수 수량 : " + str(bBuyVolume))
+                            logger.info("4만원 미만 매수 수량 : " + str(bBuyVolume))
                         else:
                             #bBuyVolume = math.floor((sellShare / buyPrice) * factor) / factor
                             if buyCount > 1:
